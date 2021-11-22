@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 
 const got = require('got')
@@ -11,7 +11,19 @@ module.exports = (settings) => {
   const token = settings.token
 
   const logger = function(msg) {
-    console.log(baseURL + '/' + projectID + '/audit');
+    if (/^(comms\.|.*\.get$)/.test(msg.event)) {
+        // Ignore comms events and any .get event that is just reading data
+        return;
+    }
+    if (/^auth/.test(msg.event) && !/^auth.log/.test(msg.event)) {
+        return;
+    }
+    if (msg.user) {
+      msg.user = msg.user.userId
+    }
+    delete msg.username;
+    delete msg.level;
+
     got.post(baseURL + '/' + projectID + '/audit',{
       json: msg ,
       responseType: 'json',
@@ -26,5 +38,5 @@ module.exports = (settings) => {
     })
   }
 
-  return logger; 
+  return logger;
 }
