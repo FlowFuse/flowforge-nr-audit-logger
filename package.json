@@ -1,13 +1,22 @@
 {
   "name": "@flowforge/nr-audit-logger",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "A audit logger plugin for Node-RED",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "ben@flowforge.com",
-  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flowforge/flowforge-nr-audit-logger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/flowforge/flowforge-nr-audit-logger/issues"
+  },
+  "author": {
+    "name": "FlowFlow Inc."
+  },
+  "license": "SEE LICENSE IN ./LICENSE",
   "dependencies": {
     "got": "^11.8.2"
   }
