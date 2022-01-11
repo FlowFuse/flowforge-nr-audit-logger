@@ -16,7 +16,7 @@
   "author": {
     "name": "FlowFlow Inc."
   },
-  "license": "SEE LICENSE IN ./LICENSE",
+  "license": "Apache-2.0",
   "dependencies": {
     "got": "^11.8.2"
   }
