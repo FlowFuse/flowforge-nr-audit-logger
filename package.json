@@ -1,6 +1,6 @@
 {
     "name": "@flowforge/nr-audit-logger",
-    "version": "0.9.0",
+    "version": "0.10.0",
     "description": "A audit logger plugin for Node-RED",
     "main": "index.js",
     "scripts": {
